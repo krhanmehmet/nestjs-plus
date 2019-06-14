@@ -106,7 +106,7 @@ export class AmqpConnection {
       msgOptions.queueOptions || undefined
     );
 
-    await this.channel.bindQueue(queue, exchange, routingKey);
+   // await this.channel.bindQueue(queue, exchange, routingKey);
 
     await this.channel.consume(queue, async msg => {
       try {
